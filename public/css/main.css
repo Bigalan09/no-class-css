@@ -1,0 +1,182 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul,
+li {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+  blockquote:before, blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer; }
+
+:root {
+  --color-text: #222;
+  --color-background: #fff;
+  --color-primary-base: #ffbb00;
+  --color-primary-light: #ffcf4d;
+  --color-primary-dark: #b38300;
+  --color-secondary-base: #0969a2;
+  --color-secondary-light: #0d98ea;
+  --color-secondary-dark: #053a5a;
+  --size-gutter: 30px;
+  --size-spacer: 15px;
+  --size-container-sm: 750px;
+  --size-container-md: 970px;
+  --size-container-lg: 1170px;
+  --size-viewport-sm: 768px;
+  --size-viewport-md: 992px;
+  --size-viewport-lg: 1200px; }
+
+main,
+header,
+footer,
+article,
+section,
+aside,
+details,
+summary {
+  display: block;
+  margin: var(--size-spacer) auto; }
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-background); }
+
+main {
+  width: 100%;
+  margin: var(--size-spacer) auto; }
+
+@media (min-width: 768px) {
+  /* viewport min-width: 768px */
+  main {
+    /* main width: 750px */
+    width: var(--size-container-sm); } }
+
+@media (min-width: 992px) {
+  /* viewport min-width: 992px */
+  main {
+    /* main width: 970px */
+    width: var(--size-container-md); } }
+
+@media (min-width: 1200px) {
+  /* viewport min-width: 1200px */
+  main {
+    /* main width: 1170px */
+    width: var(--size-container-lg); } }

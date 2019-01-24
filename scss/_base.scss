@@ -1,0 +1,33 @@
+// _base.scss
+
+main,
+header,
+footer,
+article,
+section,
+aside,
+details,
+summary {
+  display: block;
+  margin: var(size(spacer)) auto;
+}
+
+body {
+  color: color(text);
+  background-color: color(background);
+}
+
+main {
+  width: 100%;
+  margin: var(size(spacer)) auto;
+}
+
+@each $name, $size in map-get($sizes, viewport) {
+  @media (min-width: size(viewport, $name, true)) {
+    /* viewport min-width: #{size(viewport, $name, true)} */
+    main {
+      /* main width: #{size(container, $name, true)} */
+      width: var(size(container, $name));
+    }
+  }
+}
