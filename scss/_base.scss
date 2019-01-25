@@ -13,13 +13,27 @@ summary {
 }
 
 body {
-  color: color(text);
   background-color: color(background);
 }
 
 main {
   width: 100%;
   margin: var(size(spacer)) auto;
+}
+
+header {
+  width: 100%;
+  padding: var(padding(xl)) 0;
+}
+
+footer {
+  border-top: 1px solid color(primary, dark);
+  padding: var(padding(xs)) 0;
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 @each $name, $size in map-get($sizes, viewport) {

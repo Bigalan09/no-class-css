@@ -49,6 +49,31 @@
   }
 }
 
+// retrieve size from map with Sass ie. `size(viewport, sm)`
+@function padding($size-name, $size-variant: null, $true-val: false) {
+  // we need to return the size value
+  @if $true-val == true {
+    // size variant is optional
+    @if ($size-variant != null) {
+      // map inception, need two deep
+      @return map-get(map-get($paddings, $size-name), $size-variant);
+    } @else {
+      // single-level size, one deep
+      @return map-get($paddings, $size-name);
+    }
+    // if we're only returning the CSS4 variable
+  } @else {
+    // size variant is optional
+    @if ($size-variant != null) {
+      // map inception, need two names
+      @return #{$padding-prefix}#{$size-name}-#{$size-variant};
+    } @else {
+      // single-level size, one name
+      @return #{$padding-prefix}#{$size-name};
+    }
+  }
+}
+
 // define local variable
 @mixin var($name, $value) {
   #{--$name}: $value;

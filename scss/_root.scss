@@ -35,4 +35,26 @@
       #{$size-prefix}#{$name}: $size;
     }
   }
+  
+  // each item in size map
+  @each $name, $size in $paddings {
+    // maps require a second loop
+    @if type-of($size) == "map" {
+      // each item in sub map
+      @each $subname, $subsize in $size {
+        // --size-viewport-md
+        #{$padding-prefix}#{$name}-#{$subname}: $subsize;
+      }
+
+      // normal sizes
+    }
+    @elseif type-of($size) == "number" {
+      // --size-background
+      #{$padding-prefix}#{$name}: $size;
+    }
+  }
+
+  #{--font-family}: $font-family;
+  #{--font-size}: $font-size-base;
+  #{--line-height}: $line-height-base;
 }
