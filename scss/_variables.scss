@@ -13,6 +13,11 @@ $colors: (
     base: #0969a2,
     light: lighten(#0969a2, 15%),
     dark: darken(#0969a2, 15%)
+  ),
+  grey: (
+    base: #4f4f4f,
+    light: #f4f4f4,
+    dark: #252525
   )
 );
 

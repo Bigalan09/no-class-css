@@ -135,6 +135,9 @@ button {
   --color-secondary-base: #0969a2;
   --color-secondary-light: #0d98ea;
   --color-secondary-dark: #053a5a;
+  --color-grey-base: #4f4f4f;
+  --color-grey-light: #f4f4f4;
+  --color-grey-dark: #252525;
   --size-gutter: 30px;
   --size-spacer: 15px;
   --size-container-sm: 750px;
@@ -149,6 +152,9 @@ button {
   --padding-lg: 20px;
   --padding-xl: 40px;
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+  --font-serif: Georgia, Times, "Times New Roman", serif;
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-size: 16px;
   --line-height: 1.5; }
 
@@ -226,26 +232,79 @@ h6 {
   font-weight: 500; }
 
 h1 {
-  font-size: 1.8rem; }
+  font-size: 2rem; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 1.8rem; }
 
 h3 {
-  font-size: 1.3rem; }
+  font-size: 1.5rem; }
 
 h4 {
-  font-size: 1.1rem; }
+  font-size: 1.3rem; }
 
 h5 {
-  font-size: 1rem; }
+  font-size: 1.1rem; }
 
 h6 {
-  font-size: 0.9rem; }
+  font-size: 1rem; }
 
 small {
   color: var(--color-secondary-base);
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  font-size: 75%; }
+
+em, i {
+  font-style: italic; }
+
+strong, b {
+  font-weight: 600; }
+
+ul, ol {
+  padding-left: var(--padding-md);
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px; }
+
+ul li {
+  list-style: disc; }
+
+ol li {
+  list-style: decimal; }
+
+ul li, ol li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  margin-bottom: 0.1rem; }
+
+ol ul, ul ol, ul ul, ol ol {
+  margin-block-start: 0px;
+  margin-block-end: 0px; }
+
+ol ul li, ul ol li, ul ul li, ol ol li {
+  list-style: disc; }
+
+pre, code {
+  font-family: var(--font-monospace); }
+
+pre {
+  background-color: var(--color-grey-light);
+  display: block;
+  padding: var(--padding-lg);
+  overflow-x: auto; }
+
+code {
+  font-size: 0.9rem;
+  padding: 0 var(--padding-xs);
+  background-color: var(--color-grey-light);
+  white-space: pre-wrap; }
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre; }
 
 input[type="submit"],
 input[type="reset"],
