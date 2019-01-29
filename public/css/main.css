@@ -129,9 +129,9 @@ button {
 :root {
   --color-text: #222;
   --color-background: #fff;
-  --color-primary-base: #ffbb00;
-  --color-primary-light: #ffcf4d;
-  --color-primary-dark: #b38300;
+  --color-primary-base: #333333;
+  --color-primary-light: #595959;
+  --color-primary-dark: #0d0d0d;
   --color-secondary-base: #0969a2;
   --color-secondary-light: #0d98ea;
   --color-secondary-dark: #053a5a;
@@ -152,6 +152,9 @@ button {
   --font-size: 16px;
   --line-height: 1.5; }
 
+*, html, body {
+  box-sizing: border-box; }
+
 main,
 header,
 footer,
@@ -168,11 +171,8 @@ body {
 
 main {
   width: 100%;
+  padding: var(--size-gutter);
   margin: var(--size-spacer) auto; }
-
-header {
-  width: 100%;
-  padding: var(--padding-xl) 0; }
 
 footer {
   border-top: 1px solid var(--color-primary-dark);
@@ -185,22 +185,84 @@ footer {
   /* viewport min-width: 768px */
   main {
     /* main width: 750px */
-    width: var(--size-container-sm); } }
+    width: var(--size-container-sm);
+    margin: var(--size-spacer) auto; } }
 
 @media (min-width: 992px) {
   /* viewport min-width: 992px */
   main {
     /* main width: 970px */
-    width: var(--size-container-md); } }
+    width: var(--size-container-md);
+    margin: var(--size-spacer) auto; } }
 
 @media (min-width: 1200px) {
   /* viewport min-width: 1200px */
   main {
     /* main width: 1170px */
-    width: var(--size-container-lg); } }
+    width: var(--size-container-lg);
+    margin: var(--size-spacer) auto; } }
+
+html {
+  font-size: var(--font-size); }
+  @media (max-width: 1000px) {
+    html {
+      font-size: calc(12px + 0.4vw); } }
 
 body {
   color: var(--color-text);
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: inherit;
+  line-height: 1.2;
+  font-weight: 500; }
+
+h1 {
+  font-size: 1.8rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.3rem; }
+
+h4 {
+  font-size: 1.1rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.9rem; }
+
+small {
+  color: var(--color-secondary-base);
+  vertical-align: bottom; }
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background-color: var(--color-primary-base);
+  border-color: var(--color-primary-dark);
+  border-radius: 5px;
+  color: var(--color-background);
+  padding: var(--padding-sm) var(--padding-md);
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }

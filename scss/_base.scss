@@ -1,5 +1,9 @@
 // _base.scss
 
+*, html, body {
+  box-sizing: border-box;
+}
+
 main,
 header,
 footer,
@@ -18,12 +22,8 @@ body {
 
 main {
   width: 100%;
+  padding: var(size(gutter));
   margin: var(size(spacer)) auto;
-}
-
-header {
-  width: 100%;
-  padding: var(padding(xl)) 0;
 }
 
 footer {
@@ -42,6 +42,7 @@ footer {
     main {
       /* main width: #{size(container, $name, true)} */
       width: var(size(container, $name));
+      margin: var(size(spacer)) auto;
     }
   }
 }
